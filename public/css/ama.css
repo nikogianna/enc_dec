@@ -1,0 +1,160 @@
+body {
+  /* background: #f1c40f; */
+  background: rgb(65,65,65);
+}
+
+.button1 {
+  /* background: #3498db; */
+  background: rgb(192, 0, 0);
+  padding: 1em 0;
+    height: 5%;
+  width: 180px;
+  /* padding: 4px 0; */
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  border-radius: 3px;
+}
+.button2 {
+  /* background: #3498db; */
+  background: rgb(192, 0, 0);
+
+  width: 180px;
+  /* padding: 4px 0; */
+  padding: 1em 0;
+    height: 5%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  border-radius: 3px;
+}
+.button3 {
+  /* background: #3498db; */
+  background: rgb(192, 0, 0);
+
+  width: 180px;
+  /* padding: 4px 0; */
+  padding: 1em 0;
+    height: 5%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  border-radius: 3px;
+}
+.button4 {
+  /* background: #3498db; */
+  background: rgb(192, 0, 0);
+
+  width: 180px;
+  /* padding: 4px 0; */
+  padding: 1em 0;
+    height: 5%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  border-radius: 3px;
+}
+.button1 p {
+  font-family: 'Roboto';
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFF;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.button2 p {
+  font-family: 'Roboto';
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFF;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.button3 p {
+  font-family: 'Roboto';
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFF;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.button4 p {
+  font-family: 'Roboto';
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFF;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.button1:hover {
+  cursor: pointer;
+}
+.button1:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  border-radius: 50%;
+  background-color: #927608;
+  opacity: 0.4;
+  bottom: -30px;
+}
+.button2:hover {
+  cursor: pointer;
+}
+.button2:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  border-radius: 50%;
+  background-color: #927608;
+  opacity: 0.4;
+  bottom: -30px;
+}
+.button3:hover {
+  cursor: pointer;
+}
+.button3:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  border-radius: 50%;
+  background-color: #927608;
+  opacity: 0.4;
+  bottom: -30px;
+}
+.button4:hover {
+  cursor: pointer;
+}
+.button4:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  border-radius: 50%;
+  background-color: #927608;
+  opacity: 0.4;
+  bottom: -30px;
+}
