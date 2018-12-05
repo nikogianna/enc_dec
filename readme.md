@@ -19,7 +19,7 @@ This is an application to encrypt, hash and decrypt messages and files used with
 
 * Install Composer
 
- ```curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer```
+ ``curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer``
 
 * ```git clone https://github.com/nikogianna/enc_dec.git``` 
 
