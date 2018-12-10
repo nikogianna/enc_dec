@@ -3,9 +3,25 @@ body {
   background: rgb(65,65,65);
 }
 
+.button-text {
+  font-size: 1.5em !important;
+  color: rgba(197, 198, 200, 0.5);
+  text-shadow: 9px 13px 0px rgba(0,0,0,0.72);
+  font-weight: bold;
+}
+
+.button-text2 {
+  font-size: 1.5em !important;
+  color: rgba(197, 198, 200, 0.5);
+  text-shadow: 7px 15px 0px rgba(0,0,0,0.72);
+  font-weight: bold;
+}
+
+
 .button1 {
   /* background: #3498db; */
-  background: rgb(192, 0, 0);
+  /* background: rgb(192, 0, 0); */
+  background: rgba(129,149,44,0.72);
   padding: 1em 0;
     height: 5%;
   width: 180px;
@@ -15,7 +31,7 @@ body {
   top: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
-  border-radius: 3px;
+  border-radius: 20px;
 }
 .button2 {
   /* background: #3498db; */
@@ -34,7 +50,8 @@ body {
 }
 .button3 {
   /* background: #3498db; */
-  background: rgb(192, 0, 0);
+  /* background: rgb(192, 0, 0); */
+  background: rgba(129,149,44,0.72);
 
   width: 180px;
   /* padding: 4px 0; */
