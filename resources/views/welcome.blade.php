@@ -19,28 +19,28 @@
         <div class="col-md-3">
             <div class="container">
                 <div class="button1" id="button1" onclick="location.href='{{ url('/encrypt_text') }}'">
-                    <p>Encrypt Text</p>
+                    <p class="button-text">Encrypt Text</p>
                 </div>
             </div>
         </div>
         <div class="col-md-3">
             <div class="container">
-                <div class="button2" id="button2" onclick="location.href='{{ url('/encrypt_file') }}'">
-                    <p>Encrypt File</p>
+                <div class="button2" id="button2" onclick="location.href='{{ url('/decrypt_text') }}'">
+                    <p class="button-text">Decrypt Text</p>
                 </div>
             </div>
         </div>
         <div class="col-md-3">
             <div class="container">
-                <div class="button3" id="button3" onclick="location.href='{{ url('/decrypt_text') }}'">
-                    <p>Decrypt Text</p>
+                <div class="button3" id="button3" onclick="location.href='{{ url('/encrypt_file') }}'">
+                    <p class="button-text">Encrypt File</p>
                 </div>
             </div>
         </div>
         <div class="col-md-3">
             <div class="container">
                 <div class="button4" id="button4" onclick="location.href='{{ url('/decrypt_file') }}'">
-                    <p>Decrypt File</p>
+                    <p class="button-text">Decrypt File</p>
                 </div>
             </div>
         </div>

@@ -21,17 +21,18 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/ama.css') }}" rel="stylesheet">
 
 </head>
 
-<body style="background-color: rgb(65,65,65);">
+<body style="background-color: rgb(35,35,35);">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark navbar-laravel" style="background-color: rgb(192,0,0);">
+        <nav class="navbar navbar-expand-md navbar-dark navbar-laravel" style="background-color: rgb(200,0,0);">
             <a class="navbar-left" style="float: left" href="{{ url('http://www.scytale.ceid.upatras.gr/index.php/en/') }}">
-                <img src="{{asset('/scytale_group_logo_new.png')}}" style="display: inline-block;">
+                <img src="{{asset('/logo.png')}}" style="max-height: 150px; display: inline-block;">
             </a>
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand button-text2" style="font-size: 2em !important;" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -45,7 +46,7 @@
         </main>
     </div>
 
-    <footer class="footer" style="position: absolute;right: 0;bottom: 0;left: 0;padding: 1rem;background-color: rgb(192, 0, 0);text-align: center;">
+    <footer class="footer" style="position: absolute;right: 0;bottom: 0;left: 0;padding: 1rem;background-color: rgb(200, 0, 0);text-align: center;">
       <div class="container">
         <span class="text-muted">Copyright © 2018 SCYTALE Group. All Rights Reserved.</span>
       </div>

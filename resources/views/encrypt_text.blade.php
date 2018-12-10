@@ -8,7 +8,10 @@
     </div>
 </div>
 
+@endsection
 
+@section('fileOrText')
+some text
 @endsection
 
 @section('fileOrText2')

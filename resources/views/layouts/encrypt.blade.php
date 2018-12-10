@@ -29,17 +29,17 @@
                 <div class="accordion-group">
                     <div class="panel-collapse collapse show" id="collapseExample" style="text-align: center;">
                         <div class="card card-body" style="margin:auto; width: 70%; background-color: #d2cfcf;">
-                            Encrypt @yield('fileOrText2') with AES-256-ECB.
+                            Encrypt @yield('fileOrText2') with AES-256-ECB (256 bit).
                         </div>
                     </div>
                     <div class="panel-collapse collapse" id="collapseExample2" style="text-align: center;">
                         <div class="card card-body" style="margin:auto; width: 70%; background-color: #d2cfcf;">
-                            Encrypt @yield('fileOrText2') with RSA.
+                            Encrypt @yield('fileOrText2') with RSA (512 bit).
                         </div>
                     </div>
                     <div class="panel-collapse collapse" id="collapseExample3" style="text-align: center;">
                         <div class="card card-body" style="margin:auto; width: 70%; background-color: #d2cfcf;">
-                            Digest @yield('fileOrText2') with SHA-256.
+                            Generate the message digest of @yield('fileOrText2') with SHA-2 (256 bit).
                         </div>
                     </div>
                 </div>
