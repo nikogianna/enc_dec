@@ -63,10 +63,10 @@
             <div id="myDec2">
                 <div class="btn-group btn-group-toggle" data-toggle="buttons" id="encOptions">
                     <label class="btn btn-secondary active" data-toggle="collapse" href="#collapseDecFile">
-                        <input type="radio" name="encOptions" value="manualFile" id="decFile" autocomplete="off" checked>File
+                        <input type="radio" name="encOptions" value="manualFile" id="decFile" autocomplete="off" checked>File-Key
                     </label>
                     <label class="btn btn-secondary" data-toggle="collapse" href="#collapseDecText">
-                        <input type="radio" name="encOptions" value="manualText" id="decText" autocomplete="off">Text
+                        <input type="radio" name="encOptions" value="manualText" id="decText" autocomplete="off">Text-Key
                     </label>
                 </div>
 

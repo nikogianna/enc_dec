@@ -49,7 +49,8 @@ class DecryptController extends Controller
           'fileToUpload'      => 'required|file|max:10',
          ]);
             }
-            $filename = 'ecnrypted_img.png';
+            // $filename = 'ecnrypted_img.png';
+            $filename = 'ecnrypted';
         }
 
         $this->handle_req();
