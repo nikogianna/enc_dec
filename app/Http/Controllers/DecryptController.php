@@ -25,7 +25,7 @@ class DecryptController extends Controller
         if (request()->has('textToUpload')) {
             request()->validate([
              'textToUpload'          => 'required|string|min:1|max:750',
-             'userDecryptionKeyText' => 'required_without:userDecryptionKeyFile|string|nullable|max:128',
+             'userDecryptionKeyText' => 'required_without:userDecryptionKeyFile|string|nullable|max:512',
              'userDecryptionKeyFile' => 'file|max:10',
              'encOptions' => 'string|nullable|min:10|max:10',
              'encChoiceAES' => 'string|nullable|min:4|max:5',
@@ -34,7 +34,7 @@ class DecryptController extends Controller
             $filename = 'ecnrypted_text.txt';
         } else {
             request()->validate([
-             'userDecryptionKeyText' => 'required_without:userDecryptionKeyFile|string|nullable|max:128',
+             'userDecryptionKeyText' => 'required_without:userDecryptionKeyFile|string|nullable|max:512',
              'userDecryptionKeyFile' => 'file|max:10',
              'encOptions' => 'string|nullable|min:10|max:10',
              'encChoiceAES' => 'string|nullable|min:4|max:5',

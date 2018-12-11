@@ -27,7 +27,7 @@ class EncryptController extends Controller
         if (request()->has('textToUpload')) {
             request()->validate([
              'textToUpload'          => 'required|string|min:1|max:750',
-             'userEncryptionKeyText' => 'required_without_all:userEncryptionKeyFile,randomEncryptionKey|string|nullable|max:128',
+             'userEncryptionKeyText' => 'required_without_all:userEncryptionKeyFile,randomEncryptionKey|string|nullable|max:512',
              'userEncryptionKeyFile' => 'file|max:10',
              'randomEncryptionKey'   => 'string|nullable|max:4',
              'options'               => 'string|nullable|min:4|max:10',
@@ -35,7 +35,7 @@ class EncryptController extends Controller
             ]);
         } else {
             request()->validate([
-              'userEncryptionKeyText' => 'required_without_all:userEncryptionKeyFile,randomEncryptionKey|string|nullable|max:128',
+              'userEncryptionKeyText' => 'required_without_all:userEncryptionKeyFile,randomEncryptionKey|string|nullable|max:512',
               'userEncryptionKeyFile' => 'file|max:10',
               'randomEncryptionKey'   => 'string|nullable|max:4',
               'options'               => 'string|nullable|min:4|max:10',
