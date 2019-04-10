@@ -87,13 +87,14 @@ class DecryptController extends Controller
     }
     public function decrypt_AES($in, $enc_key)
     {
-        $out  = openssl_decrypt($in, 'aes-256-ecb', $enc_key, 0);
+        $iv = hex2bin('000102030405060708090a0b0c0d0e0f');
+        $out  = openssl_decrypt($in, 'aes-128-ctr', $enc_key, 0, $iv);
         return $out;
     }
-    public function decrypt_RSA($data, $publickey)
+    public function decrypt_RSA($data, $privatekey)
     {
         $rsa = new RSA();
-        $rsa->loadKey($publickey);
+        $rsa->loadKey($privatekey);
         $out = $rsa->decrypt($data);
         return $out;
     }

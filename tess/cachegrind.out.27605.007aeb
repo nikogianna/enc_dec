@@ -1,0 +1,39 @@
+version: 1
+creator: xdebug 2.6.1 (PHP 7.2.15-1+ubuntu18.04.1+deb.sury.org+1)
+cmd: /home/vagrant/code/server.php
+part: 1
+positions: line
+
+events: Time Memory
+
+fl=(1) php:internal
+fn=(1) php::parse_url
+11 2 40
+
+fl=(1)
+fn=(2) php::urldecode
+11 1 40
+
+fl=(1)
+fn=(3) php::file_exists
+17 454 0
+
+fl=(2) /home/vagrant/code/server.php
+fn=(4) {main}
+
+summary: 1452 40
+
+1 993 -40
+cfl=(1)
+cfn=(1)
+calls=1 0 0
+11 2 40
+cfl=(1)
+cfn=(2)
+calls=1 0 0
+11 1 40
+cfl=(1)
+cfn=(3)
+calls=1 0 0
+17 454 0
+

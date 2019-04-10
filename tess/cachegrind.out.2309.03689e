@@ -1,0 +1,44 @@
+version: 1
+creator: xdebug 2.6.1 (PHP 7.2.15-1+ubuntu18.04.1+deb.sury.org+1)
+cmd: /home/vagrant/code/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php
+part: 1
+positions: line
+
+events: Time Memory
+
+fl=(1)
+fn=(1529) php::error_get_last
+122 2 792
+
+fl=(1)
+fn=(81)
+122 1 0
+
+fl=(1)
+fn=(223)
+149 1 0
+
+fl=(85)
+fn=(1530) Illuminate\Foundation\Bootstrap\HandleExceptions->isFatal
+147 458 0
+cfl=(1)
+cfn=(223)
+calls=1 0 0
+149 1 0
+
+fl=(85)
+fn=(1531) Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown
+120 1395 -792
+cfl=(1)
+cfn=(1529)
+calls=1 0 0
+122 2 792
+cfl=(1)
+cfn=(81)
+calls=1 0 0
+122 1 0
+cfl=(85)
+cfn=(1530)
+calls=1 0 0
+122 459 0
+

@@ -1,0 +1,64 @@
+version: 1
+creator: xdebug 2.6.1 (PHP 7.2.15-1+ubuntu18.04.1+deb.sury.org+1)
+cmd: /home/vagrant/code/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php
+part: 1
+positions: line
+
+events: Time Memory
+
+fl=(1)
+fn=(1934) php::error_get_last
+122 0 0
+
+fl=(1)
+fn=(81)
+122 1 0
+
+fl=(85)
+fn=(1935) Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown
+120 447 0
+cfl=(1)
+cfn=(1934)
+calls=1 0 0
+122 0 0
+cfl=(1)
+cfn=(81)
+calls=1 0 0
+122 1 0
+
+fl=(1)
+fn=(1418)
+62 1 0
+
+fl=(1)
+fn=(1115)
+63 138 -472
+
+fl=(292)
+fn=(1936) Monolog\Handler\RotatingFileHandler->close
+60 442 -24
+cfl=(1)
+cfn=(1418)
+calls=1 0 0
+62 1 0
+cfl=(1)
+cfn=(1115)
+calls=1 0 0
+63 138 -472
+
+fl=(293)
+fn=(1936)
+60 225 0
+cfl=(292)
+cfn=(1936)
+calls=1 0 0
+62 583 -496
+
+fl=(290)
+fn=(1937) Monolog\Handler\RotatingFileHandler->__destruct
+167 217 0
+cfl=(293)
+cfn=(1936)
+calls=1 0 0
+170 808 -496
+

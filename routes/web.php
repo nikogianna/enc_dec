@@ -20,4 +20,11 @@ Route::post('/encrypt_file', 'EncryptController@upload');
 Route::get('/decrypt_text', 'DecryptController@decrypt_text_view');
 Route::post('/decrypt_text', 'DecryptController@upload');
 Route::get('/decrypt_file', 'DecryptController@decrypt_file_view');
-Route::post('/decrypt_file', 'DecryptController@upload');
+
+Route::get('/test', 'TestController@test_view');
+
+Route::post('/test', 'TestController@upload');
+
+Route::get('/ciphers', 'CiphersController@test_view');
+
+Route::post('/ciphers', 'CiphersController@get_ciphers');
