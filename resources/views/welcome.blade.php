@@ -45,6 +45,19 @@
             </div>
         </div>
     </div>
+    <div class="modal-body row">
+    </div>
+    <div class="modal-body row">
+    </div>
+    <div class="modal-body row">
+      {{-- <div class="col-md-5"> --}}
+          {{-- <div class="container"> --}}
+              <div class="button5 buttonC" id="button5" onclick="location.href='{{ url('/test') }}'">
+                  <p class="button-text" style="color:red;">Simulation</p>
+              </div>
+          {{-- </div> --}}
+      {{-- </div> --}}
+    </div>
 </div>
 <script src="{{ asset('js/welcome.js') }}"></script>
 @endsection

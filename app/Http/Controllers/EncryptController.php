@@ -139,14 +139,14 @@ class EncryptController extends Controller
         // $dat = getrusage();
         $start = microtime(true);
         // dd($dat['ru_utime.tv_usec']);
-        for ($i = 1; $i < 1500; $i++ ) {
-        $data = openssl_encrypt($data_in, 'aes-256-ecb', $encryption_key, 0);
-        }
+        // for ($i = 1; $i < 1500; $i++ ) {
+        $data = openssl_encrypt($data_in, 'aes-128-ecb', $encryption_key, 0);
+        // }
         // $dat2 = getrusage();
         // dd(($dat2['ru_utime.tv_usec'] + $dat2['ru_stime.tv_usec']) - ($dat['ru_utime.tv_usec'] + $dat['ru_stime.tv_usec']));
         // dd($dat2['ru_utime.tv_usec'] - $dat['ru_utime.tv_usec']);
          $time_elapsed_secs = microtime(true) - $start;
-         dd($time_elapsed_secs);
+         // dd($time_elapsed_secs);
         return $data;
     }
     public function encrypt_RSA(String $file, $publickey)

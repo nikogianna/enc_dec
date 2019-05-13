@@ -28,3 +28,12 @@ Route::post('/test', 'TestController@upload');
 Route::get('/ciphers', 'CiphersController@test_view');
 
 Route::post('/ciphers', 'CiphersController@get_ciphers');
+
+Route::post('/test/binary', 'TestController@to_binary');
+
+Route::post('/test/random_number', 'TestController@random_number_gen');
+
+Route::post('/test/decrypt', 'TestController@decrypt');
+
+Route::get('/processor', 'CoprocessorController@proc_view');
+Route::post('/processor', 'CoprocessorController@encrypt');

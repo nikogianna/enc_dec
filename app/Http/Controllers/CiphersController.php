@@ -51,4 +51,18 @@ class CiphersController extends Controller
         // print_r($ciphers);
         // print_r($cipher_aliases);
     }
+
+    // public function get_ciphers2()
+    // {
+    //     static $ciphers;
+    //
+    //     // Function has already run
+    //     if ($ciphers !== null) {
+    //         return $ciphers;
+    //     }
+    //
+    //     $result = openssl_get_cipher_methods();
+    //
+    //     return $result;
+    // }
 }
