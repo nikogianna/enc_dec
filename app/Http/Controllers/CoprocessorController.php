@@ -17,54 +17,69 @@ class CoprocessorController extends Controller
         // dd (request()->all());
         if (ctype_xdigit(request()->input_bits1)) {
             $input1 = str_pad(request()->input_bits1, 8, '0', STR_PAD_LEFT);
-        } else if (request()->input_bits1 == null) {
-           $input1 = '00000000';
-         } else {
+        } elseif (request()->input_bits1 == null) {
+            $input1 = '00000000';
+        } else {
             dd('asdsa');
         };
         if (ctype_xdigit(request()->input_bits2)) {
             $input2 = str_pad(request()->input_bits2, 8, '0', STR_PAD_LEFT);
-        } else if (request()->input_bits2 == null) {
-           $input2 = '00000000';
-         } else {
+        } elseif (request()->input_bits2 == null) {
+            $input2 = '00000000';
+        } else {
             dd('asdsa');
         };
         if (ctype_xdigit(request()->input_bits3)) {
             $input3 = str_pad(request()->input_bits3, 8, '0', STR_PAD_LEFT);
-        } else if (request()->input_bits3 == null) {
-           $input3 = '00000000';
-         } else {
+        } elseif (request()->input_bits3 == null) {
+            $input3 = '00000000';
+        } else {
             dd('asdsa');
         };
         if (ctype_xdigit(request()->input_bits4)) {
             $input4 = str_pad(request()->input_bits4, 8, '0', STR_PAD_LEFT);
-        } else if (request()->input_bits4 == null) {
-           $input4 = '00000000';
-         } else {
+        } elseif (request()->input_bits4 == null) {
+            $input4 = '00000000';
+        } else {
             dd('asdsa');
         };
 
-        $input = $input1.$input2.$input3.$input4;
-        $enc_key = request()->encryption_key;
-        $iv = request()->iv;
+        $enc_key1 = request()->encryption_key1;
+        $enc_key2 = request()->encryption_key2;
+        $enc_key3 = request()->encryption_key3;
+        $enc_key4 = request()->encryption_key4;
 
-        // dd($enc_key);
-        // dd ($input1.$input2.$input3.$input4);
+        $iv1 = request()->iv1;
+        $iv2 = request()->iv2;
+        $iv3 = request()->iv3;
+        $iv4 = request()->iv4;
+
+        if (request()->block_cipher == 'aes-128-ecb') {
+            $iv1 = $iv2 = $iv3 = $iv4 = null;
+        }
 
         if (request()->action === 'cipher') {
-          $data = openssl_encrypt($input, request()->block_cipher, $enc_key, 0, $iv);
-        }
-        else if (request()->action === 'public') {
-         openssl_public_encrypt ( $input , $data, $enc_key);
+            $data1 = openssl_encrypt($input1, request()->block_cipher, $enc_key1, 0, $iv1);
+            $data2 = openssl_encrypt($input2, request()->block_cipher, $enc_key2, 0, $iv2);
+            $data3 = openssl_encrypt($input3, request()->block_cipher, $enc_key3, 0, $iv3);
+            $data4 = openssl_encrypt($input4, request()->block_cipher, $enc_key4, 0, $iv4);
+        } elseif (request()->action === 'public') {
+            openssl_public_encrypt($input1, $data1, $enc_key1);
+            openssl_public_encrypt($input2, $data2, $enc_key2);
+            openssl_public_encrypt($input3, $data3, $enc_key3);
+            openssl_public_encrypt($input4, $data4, $enc_key4);
 
-          $data = base64_encode($data);
-        }
-        else if (request()->action === 'hash') {
-          $data = hash ( request()->hash_select , $input);
+            $data1 = base64_encode($data1);
+            $data2 = base64_encode($data2);
+            $data3 = base64_encode($data3);
+            $data4 = base64_encode($data4);
+        } elseif (request()->action === 'hash') {
+            $data1 = hash(request()->hash_select, $input1);
+            $data2 = hash(request()->hash_select, $input2);
+            $data3 = hash(request()->hash_select, $input3);
+            $data4 = hash(request()->hash_select, $input4);
         }
 
-        return response()->json(['output'=>$data]);
-        // dd($data);
-
+        return response()->json(['output1'=>$data1, 'output2'=>$data2,'output3'=>$data3,'output4'=>$data4]);
     }
 }
