@@ -25,7 +25,7 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-    
+
 </head>
 
 <body style="background-color: rgb(35,35,35);">
@@ -49,10 +49,10 @@
         </main>
     </div>
 
-    <footer class="footer" style="position: absolute;right: 0;bottom: 0;left: 0;padding: 1rem;background-color: rgb(200, 0, 0);text-align: center;">
+    {{-- <footer class="footer" style="position: absolute;right: 0;bottom: 0;left: 0;padding: 1rem;background-color: rgb(200, 0, 0);text-align: center;">
       <div class="container">
         <span class="text-muted">Copyright © 2018. All Rights Reserved.</span>
       </div>
-    </footer>
+    </footer> --}}
 </body>
 </html>

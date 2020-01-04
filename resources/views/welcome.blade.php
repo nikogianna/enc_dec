@@ -52,7 +52,7 @@
     <div class="modal-body row">
       {{-- <div class="col-md-5"> --}}
           {{-- <div class="container"> --}}
-              <div class="button5 buttonC" id="button5" onclick="location.href='{{ url('/test') }}'">
+              <div class="button5 buttonC" id="button5" onclick="location.href='{{ url('/processor') }}'">
                   <p class="button-text" style="color:red;">Simulation</p>
               </div>
           {{-- </div> --}}

@@ -13,9 +13,9 @@
 </style>
 
 {{-- <script type="text/javascript" src="{{ URL::asset('js/test.js') }}"></script> --}}
-{{-- <form autocomplete="off"> --}}
+<form autocomplete="off">
 {{-- <form method="post" id="testUpload" class="form" action="{{ action('CoprocessorController@encrypt') }}" enctype="multipart/form-data"> --}}
-<form>
+{{-- <form> --}}
 
   @csrf
   @if ($errors->any())
@@ -181,15 +181,21 @@
           <input type="radio" name="action" value="cipher" checked />
           <label for="cipher" style="color:white;" display: block;>Block Cipher</label>
           <select id="block_cipher" class="dropdown" name="block_cipher">
-            <option>aes-128-cbc</option>
             <option>aes-128-ecb</option>
+            <option>aes-128-cbc</option>
             <option>aes-128-cfb</option>
+            <option>aes-128-ofb</option>
+            <option>des-ecb</option>
+            <option>des-cbc</option>
+            <option>des-cfb</option>
+            <option>des-ede</option>
+
           </select>
         </div>
 
         <div>
           <input type="radio" name="action" value="public" />
-          <label for="public" style="color:white;">Assymetric (RSA)</label>
+          <label for="public" style="color:white;">Asymmetric (RSA)</label>
         </div>
         <div>
           <input type="radio" name="action" value="hash" />
@@ -198,8 +204,6 @@
             <option>md5</option>
             <option>sha512</option>
             <option>sha3-512</option>
-            <option>tiger192,4</option>
-            <option>haval256,5</option>
           </select>
         </div>
       </div>
@@ -274,6 +278,11 @@
 </form>
 
 <script type="text/javascript">
+
+  $( document ).ready(function() {
+    $('.iv').attr("disabled", "disabled");
+  });
+
   $('input[type=radio][name=action]').change(function() {
     if (this.value == 'public') {
       $('#public_key').removeAttr("disabled");
@@ -293,9 +302,12 @@
       $('#public_key').attr("disabled", "disabled");
       $('.iv').removeAttr("disabled");
       $('.encryption_key').removeAttr("disabled");
-      if ($('#block_cipher').find(":selected").text() == 'aes-128-ecb') {
+
+      if ($('#block_cipher').find(":selected").text() == 'des-ecb') {
         $('.iv').attr("disabled", "disabled");
-      } else  {
+      } else if ($('#block_cipher').find(":selected").text() == 'aes-128-ecb') {
+        $('.iv').attr("disabled", "disabled");
+      } else {
         $('.iv').removeAttr("disabled");
       }
     }
@@ -304,9 +316,12 @@
   $('#block_cipher').on('change', function() {
 
     var cipher = $('#block_cipher').find(":selected").text();
-    if (cipher == 'aes-128-ecb') {
+
+    if (cipher == 'des-ecb') {
       $('.iv').attr("disabled", "disabled");
-    } else  {
+    } else if (cipher == 'aes-128-ecb') {
+      $('.iv').attr("disabled", "disabled");
+    } else {
       $('.iv').removeAttr("disabled");
     }
   });

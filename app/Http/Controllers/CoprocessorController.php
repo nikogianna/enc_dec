@@ -49,12 +49,27 @@ class CoprocessorController extends Controller
         $enc_key3 = request()->encryption_key3;
         $enc_key4 = request()->encryption_key4;
 
+
         $iv1 = request()->iv1;
         $iv2 = request()->iv2;
         $iv3 = request()->iv3;
         $iv4 = request()->iv4;
 
+
+        if (strpos(request()->block_cipher, 'des') !== false) {
+            // $iv1 = $iv2 = $iv3 = $iv4 = null;
+            $iv1 = substr($iv1, 0, 8);
+            $iv2 = substr($iv2, 0, 8);
+            $iv3 = substr($iv3, 0, 8);
+            $iv4 = substr($iv4, 0, 8);
+
+        }
+
         if (request()->block_cipher == 'aes-128-ecb') {
+            $iv1 = $iv2 = $iv3 = $iv4 = null;
+        }
+
+        if (request()->block_cipher == 'des-ecb') {
             $iv1 = $iv2 = $iv3 = $iv4 = null;
         }
 
